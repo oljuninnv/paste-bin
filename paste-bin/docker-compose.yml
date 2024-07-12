@@ -16,6 +16,8 @@ services:
     depends_on:
       - mysql
   web:
+    networks:      
+      [my-network]
     image: nginx
     ports:
       - "8001:80"
